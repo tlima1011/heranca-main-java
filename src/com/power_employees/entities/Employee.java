@@ -1,10 +1,14 @@
 package com.power_employees.entities;
 
+import java.util.ArrayList;
+
 public class Employee {
 	
 	private String Name; 
 	private int Hours; 
 	private double ValuePerHour;
+	
+	public ArrayList<Employee> employees = new ArrayList<>(); 
 	
 	public Employee() { 
 		
@@ -18,6 +22,10 @@ public class Employee {
 	
 	public double payment() { 
 		return Hours * ValuePerHour; 
+	}
+	
+	public void addEmployee(Employee e) {
+		employees.add(e);
 	}
 
 	@Override
